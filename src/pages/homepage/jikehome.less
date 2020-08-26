@@ -1,0 +1,87 @@
+@import (reference) "../../style/mixin.less";
+@import "../../assets/iconfonts/iconfont.css";
+
+.pro-list-con{
+  padding-top: @common-wd;
+}
+.wrap-item{
+    font-size: 28px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    .head-wrap{
+        display: flex;
+        padding: 15px 0 0 15px;
+        img{
+            width: 90px;
+            height: 90px;
+            border-radius: 5px;
+            // border: 1px solid red;
+        }
+        .subject-wrap{
+            // display: flex;
+            padding-left: 20px;
+            span{
+                font-weight: 600;
+            }
+            img{
+                // border: 1px solid red;
+                width:30px;
+                height:30px;
+            }
+        }
+
+    }
+    .wrap-content{
+        padding: 20px;
+    }
+    .commond{
+        display: flex;
+        width: 80%;
+        padding: 15px 20px;
+        span{
+            font-size: 36px;
+            flex:1
+        }
+    }
+}
+.pro-list-ul{
+  background-color: #fff;
+  .pro-item{
+      font-size: 29px;
+    // min-height: 140px;
+    padding: 20px;
+    border-bottom: 1PX solid #eee;
+    // .flex(space-between);
+    .pro-item-select{
+      .flex;
+      .pro-select-status{
+        .font(12px, #ccc);
+      }
+      .pro-selected{
+        color: @base-color;
+      }
+      .pro-name{
+        .font(36px);
+        margin-left: 20px;
+        margin-top: 12px;
+      }
+    }
+    .pro-item-edit{
+      .flex;
+      .icon-jian{
+        .font(50px, #ccc);
+      }
+      .pro-num{
+        .font(30px, @text-align: center);
+        min-width: 60px;
+      }
+      .icon-jia{
+        .font(50px, @base-color);
+      }
+      .edit-active{
+        color: @base-color;
+      }
+    }
+  }
+}
