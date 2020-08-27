@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { getProData, togSelectPro, editPro } from '@/store/production/action';
 import PropTypes from 'prop-types';
 import PublicHeader from '@/components/header/header';
+
 import './jikehome.less';
 
 class Production extends Component {
@@ -138,9 +139,9 @@ class Production extends Component {
                                     {item.content}
                                 </div>
                                 <div className="commond">
-                                    <span className="icon-like">👍{item.like}</span>
-                                    <span className="icon-common">📧{item.messgae}</span>
-                                    <span className="icon-repost">🔁{item.repost}</span>
+                                    <span className="icon-like" role="img" aria-label='like'>👍{item.like}</span>
+                                    <span className="icon-common" role="img" aria-label='message'>📧{item.messgae}</span>
+                                    <span className="icon-repost" role="img" aria-label='repost'>🔁{item.repost}</span>
                                 </div>
                             </div>
                         })
