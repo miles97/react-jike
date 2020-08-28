@@ -1,0 +1,68 @@
+@import (reference) "../../style/mixin.less";
+@import "../../assets/iconfonts/iconfont.css";
+
+.footer-container{
+  background-color: #fff;
+  .flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  .wh(100%, 88px);
+  .header-slide-icon{
+    .font(36px, #fff);
+    .positionLeft;
+  }
+  .header-title{
+    .font(40px, #fff);
+  }
+  .header-link{
+    .font(40px, #fff);
+    .positionRight;
+  }
+  .header-link-confim{
+    font-size: 32px;
+  }
+  .nav-slide-list{
+    // .coverScreen(fixed);
+    // top: 88px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    // flex-direction: column;
+    .nav-link{
+    //   .font(32px);
+    flex:1;
+    //   border-bottom: 1Px solid #ddd; 
+      margin: 0 @common-wd;
+    //   padding: 0 20px;
+      position: relative;
+      text-align: center;
+    }
+    .icon-plus{
+    font-size: 60px;
+    padding: 0 20px;
+    color: #fff;
+    background: #ffe411;
+    border-radius: 10px;
+    }
+  }
+  .nav-enter{
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  .nav-enter.nav-enter-active{
+    transform: translate3d(0, 0, 0);
+    transition: transform 300ms;
+  }
+
+  .nav-leave{
+    transform: translate3d(0, 0, 0);
+  }
+
+  .nav-leave.nav-leave-active{
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 300ms;
+  }
+}

@@ -83,7 +83,7 @@ react的diff算法用在什么地方呢？当组件更新的时候，react会创
 有三点值得注意：1、定义类名字的首字母必须大写 2、因为class变成了关键字，类选择器需要用className来代替。 3、类和模块内部默认使用严格模式，所以不需要用use strict指定运行模式。
 
 
-
+项目构建手册以及页面复写的相关
 
 ## 组件的生命周期
 
@@ -98,7 +98,7 @@ react的diff算法用在什么地方呢？当组件更新的时候，react会创
   **2、getInitialState()**  
 > 在使用es6的class语法时是没有这个钩子函数的，可以直接在constructor中定义this.state。此时可以访问this.props。
 
-
+ 
  **3、componentWillMount()**
 > 组件初始化时只调用，以后组件更新不调用，整个生命周期只调用一次，此时可以修改state。
 
