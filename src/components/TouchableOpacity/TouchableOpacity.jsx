@@ -18,7 +18,7 @@ export default class TouchableOpacity extends Component{
 
   handleTouchEnd = () => {
     this.refs.btn.style.opacity = '1';
-    this.props.clickCallBack();
+    this.props.clickCallBack(); //触发父组件的方法
   }
 
   shouldComponentUpdate(nextProps, nextState){

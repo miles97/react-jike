@@ -9,6 +9,9 @@
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   font-weight: normal;
+  /* 解决preventDefault */
+  touch-action: none; 
+
 }
 /*修复img默认位置和IE边框*/
 img{

@@ -3,6 +3,7 @@ import { is, fromJS } from 'immutable';
 import PublicHeader from '@/components/header/header';
 import TouchableOpacity from '@/components/TouchableOpacity/TouchableOpacity';
 import PublicAlert from '@/components/alert/alert';
+import PublicFooter from '@/components/footer/footer';
 import API from '@/api/api';
 import './balance.less';
 
@@ -99,6 +100,7 @@ class BrokeRage extends Component{
           <TouchableOpacity className="submit-btn" clickCallBack={this.sumitForm} text="申请提现" />
         </section>
         <PublicAlert closeAlert={this.closeAlert} alertTip={this.state.alertTip} alertStatus={this.state.alertStatus} />
+        <PublicFooter className="base-footer" ></PublicFooter>
       </main>
     );
   }

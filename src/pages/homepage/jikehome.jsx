@@ -7,7 +7,7 @@ import PublicFooter from '@/components/footer/footer';
 
 import './jikehome.less';
 
-class Production extends Component {
+class jikeHome extends Component {
     //   static propTypes = {
     //     proData: PropTypes.object.isRequired,
     //     getProData: PropTypes.func.isRequired,
@@ -70,13 +70,24 @@ class Production extends Component {
      * @param  {int} num   添加||删减的商品数量
      */
     handleEdit = (index, num) => {
-        let currentNum = this.props.proData.dataList[index].selectNum + num;
+        let currentNum = this.props.proData.dataList[index].selectNum + num; //赋值redux的数据
         if (currentNum < 0) {
             return
         }
-        this.props.editPro(index, currentNum);
+        this.props.editPro(index, currentNum); //调用redux方法进行数据的变动操作
     }
-
+    getName(val){
+        // if(val)
+        // switch(val){
+        //     case 1:
+        //         console.log('??')
+        //         break;
+        //     default:
+        //         console.log('!!')
+        //         break;
+        // }
+        console.log('???')
+    }
     // 选择商品，交由redux进行数据处理，作为全局变量
     togSelect = index => {
         this.props.togSelectPro(index);
@@ -111,6 +122,7 @@ class Production extends Component {
                             })}
                         </li>
                     </ul>
+                        {/* 以下内容可以通过组建进行封装 */}
                     {
                         this.state.dataList.map((item, index) => {
                             return <div className="wrap-item" key={index} >
@@ -125,9 +137,9 @@ class Production extends Component {
                                     {item.content}
                                 </div>
                                 <div className="commond">
-                                    <span className="icon-like" role="img" aria-label='like'>👍{item.like}</span>
-                                    <span className="icon-common" role="img" aria-label='message'>📧{item.messgae}</span>
-                                    <span className="icon-repost" role="img" aria-label='repost'>🔁{item.repost}</span>
+                                    <span className="icon-like" role="img" aria-label='like' onClick={this.getName}>👍{item.like}</span>
+                                    <span className="icon-common" role="img" aria-label='message' onClick={this.getName}>📧{item.messgae}</span>
+                                    <span className="icon-repost" role="img" aria-label='repost' onClick={this.getName}>🔁{item.repost}</span>
                                 </div>
                             </div>
                         })
@@ -148,4 +160,4 @@ export default connect(state => ({
     getProData,
     togSelectPro,
     editPro
-})(Production);
+})(jikeHome);
