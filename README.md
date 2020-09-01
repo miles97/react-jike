@@ -1,6 +1,6 @@
 
 ## 技术栈：
-  react + redux + webpack + react-router + ES6/7/8 + immutable
+  react + redux + webpack4.0 + react-router + ES6/7/8 + immutable 
 
 
 ## 运行项目（nodejs 6.0+）
