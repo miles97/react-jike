@@ -4,8 +4,9 @@ import { connect } from 'react-redux';
 import { getProData, togSelectPro, editPro } from '@/store/production/action';
 import PropTypes from 'prop-types';
 import PublicFooter from '@/components/footer/footer';
+import PublicHeader from '@/components/header/header';
 
-import './jikehome.less';
+import './moment.less';
 
 class jikeHome extends Component {
     //   static propTypes = {
@@ -44,6 +45,7 @@ class jikeHome extends Component {
                 like: 55,
                 repost: 23,
                 messgae: 22,
+                timegap:12
             },
             {
                 username: '神经病',
@@ -61,6 +63,7 @@ class jikeHome extends Component {
                 like: 22,
                 repost: 88,
                 messgae: 33,
+                timegap:12
             },
 
             {
@@ -79,6 +82,7 @@ class jikeHome extends Component {
                 like: 22,
                 repost: 88,
                 messgae: 33,
+                timegap:42
             }
         ]
     }
@@ -127,28 +131,20 @@ class jikeHome extends Component {
         return (
             
             <main className="common-con-top">
-                <div className="search-head">
-                    <input type="text" className="input-raund" />
-                    <span className="icon-search-icon">圈子</span>
+                <PublicHeader title='动态' record />
+                <div className="common-wrap">
+
                 </div>
                 <section className="pro-list-con">
-                    <ul className="pro-list-ul">
-                        {/* 页面头部导航 */}
-                        <li className="pro-item">
-                            {this.state.namelist.map((item, index) => {
-                                return <span className="pro-item" key={index}>{item.name}</span>
-                            })}
-                        </li>
-                    </ul>
-                        {/* 以下内容可以通过组建进行封装 */}
-                    {
+                {
                         this.state.dataList.map((item, index) => {
                             return <div className="wrap-item" key={index} >
                                 <div className="head-wrap">
                                     <img src={item.image} alt="话题头像" />
                                     <div className="subject-wrap">
-                                        <span>{item.topic}</span>
-                                        <div><img src={item.headimg} alt="用户头像" />{item.username}发布了</div>
+                                        <span>{item.username}</span>
+                                        {/* <div><img src={item.headimg} alt="用户头像" />{item.username}发布了</div> */}
+                                            <div><span>{item.timegap}分钟前</span></div>
                                     </div>
                                 </div>
                                 <div className="wrap-content">
