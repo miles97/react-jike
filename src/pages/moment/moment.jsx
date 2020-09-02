@@ -8,7 +8,7 @@ import PublicHeader from '@/components/header/header';
 
 import './moment.less';
 
-class jikeHome extends Component {
+class Moment extends Component {
     //   static propTypes = {
     //     proData: PropTypes.object.isRequired,
     //     getProData: PropTypes.func.isRequired,
@@ -135,7 +135,7 @@ class jikeHome extends Component {
                 <div className="common-wrap">
 
                 </div>
-                <section className="pro-list-con">
+                <section className="pro-list-cond">
                 {
                         this.state.dataList.map((item, index) => {
                             return <div className="wrap-item" key={index} >
@@ -174,4 +174,4 @@ export default connect(state => ({
     getProData,
     togSelectPro,
     editPro
-})(jikeHome);
+})(Moment);

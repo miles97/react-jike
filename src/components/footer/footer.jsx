@@ -38,7 +38,7 @@ export default class PublicFooter extends Component {
           <NavLink to="/jikepage" exact className="nav-link icon-jiantou-copy-copy"
             activeClassName="activeclass"
           >推荐</NavLink>
-          <NavLink to="/moment?name=123"  className="nav-link icon-jiantou-copy-copy"
+          <NavLink to="/moment" exact className="nav-link icon-jiantou-copy-copy"
             activeClassName="activeclass"
             >动态</NavLink>
           <NavLink to="/jikepage?name=1231" exact className="nav-link icon-jiantou-copy-copy" 
