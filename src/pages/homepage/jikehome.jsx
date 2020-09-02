@@ -94,7 +94,7 @@ class jikeHome extends Component {
         }
         this.props.editPro(index, currentNum); //调用redux方法进行数据的变动操作
     }
-    getName(val){
+    getName(val) {
         // if(val)
         // switch(val){
         //     case 1:
@@ -110,7 +110,7 @@ class jikeHome extends Component {
     togSelect = index => {
         this.props.togSelectPro(index);
     }
-    
+
     //  简单的react生命周期函数问题
     shouldComponentUpdate(nextProps, nextState) {
         return !is(fromJS(this.props), fromJS(nextProps)) || !is(fromJS(this.state), fromJS(nextState))
@@ -125,7 +125,7 @@ class jikeHome extends Component {
     //return的页面构建问题
     render() {
         return (
-            
+
             <main className="common-con-top">
                 <div className="search-head">
                     <input type="text" className="input-raund" />
@@ -140,7 +140,7 @@ class jikeHome extends Component {
                             })}
                         </li>
                     </ul>
-                        {/* 以下内容可以通过组建进行封装 */}
+                    {/* 以下内容可以通过组建进行封装 */}
                     {
                         this.state.dataList.map((item, index) => {
                             return <div className="wrap-item" key={index} >

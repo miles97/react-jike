@@ -45,7 +45,7 @@ class Moment extends Component {
                 like: 55,
                 repost: 23,
                 messgae: 22,
-                timegap:12
+                timegap: 12
             },
             {
                 username: '神经病',
@@ -63,7 +63,7 @@ class Moment extends Component {
                 like: 22,
                 repost: 88,
                 messgae: 33,
-                timegap:12
+                timegap: 12
             },
 
             {
@@ -82,7 +82,7 @@ class Moment extends Component {
                 like: 22,
                 repost: 88,
                 messgae: 33,
-                timegap:42
+                timegap: 42
             }
         ]
     }
@@ -98,7 +98,7 @@ class Moment extends Component {
         }
         this.props.editPro(index, currentNum); //调用redux方法进行数据的变动操作
     }
-    getName(val){
+    getName(val) {
         // if(val)
         // switch(val){
         //     case 1:
@@ -108,13 +108,15 @@ class Moment extends Component {
         //         console.log('!!')
         //         break;
         // }
-        console.log('???')
+        // console.log('???')
+        // alert(val)
+        console.log(val,'what it ')
     }
     // 选择商品，交由redux进行数据处理，作为全局变量
     togSelect = index => {
         this.props.togSelectPro(index);
     }
-    
+
     //  简单的react生命周期函数问题
     shouldComponentUpdate(nextProps, nextState) {
         return !is(fromJS(this.props), fromJS(nextProps)) || !is(fromJS(this.state), fromJS(nextState))
@@ -129,14 +131,14 @@ class Moment extends Component {
     //return的页面构建问题
     render() {
         return (
-            
+
             <main className="common-con-top">
                 <PublicHeader title='动态' record />
                 <div className="common-wrap">
 
                 </div>
                 <section className="pro-list-cond">
-                {
+                    {
                         this.state.dataList.map((item, index) => {
                             return <div className="wrap-item" key={index} >
                                 <div className="head-wrap">
@@ -144,16 +146,16 @@ class Moment extends Component {
                                     <div className="subject-wrap">
                                         <span>{item.username}</span>
                                         {/* <div><img src={item.headimg} alt="用户头像" />{item.username}发布了</div> */}
-                                            <div><span>{item.timegap}分钟前</span></div>
+                                        <div><span>{item.timegap}分钟前</span></div>
                                     </div>
                                 </div>
                                 <div className="wrap-content">
                                     {item.content}
                                 </div>
                                 <div className="commond">
-                                    <span className="icon-like" role="img" aria-label='like' onClick={this.getName}>👍{item.like}</span>
-                                    <span className="icon-common" role="img" aria-label='message' onClick={this.getName}>📧{item.messgae}</span>
-                                    <span className="icon-repost" role="img" aria-label='repost' onClick={this.getName}>🔁{item.repost}</span>
+                                    <span className="icon-like" role="img" aria-label='like' onClick={()=>this.getName(item)}>👍{item.like}</span>
+                                    <span className="icon-common" role="img" aria-label='message' onClick={()=>this.getName(item)}>📧{item.messgae}</span>
+                                    <span className="icon-repost" role="img" aria-label='repost' onClick={()=>this.getName(item)}>🔁{item.repost}</span>
                                 </div>
                             </div>
                         })
