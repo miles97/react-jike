@@ -16,6 +16,9 @@
 
  npm run build （发布）
 ```
+## 项目中待实践的React特性
+
+简单redux  生命周期还是一知半解不太了解   
 
 
 # bailicangdu的个人感悟

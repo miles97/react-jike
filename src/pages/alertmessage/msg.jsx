@@ -33,7 +33,32 @@ class message extends Component {
             origin: '你的评论',
             userHeadPic: '😊',
             username: '哈朋友'
-        }]
+        }, {
+            notice: '点赞',
+            atcion: '评论',
+            origin: '你的评论',
+            userHeadPic: '😊',
+            username: '哈朋友'
+        }, {
+            notice: '点赞',
+            atcion: '评论',
+            origin: '你的评论',
+            userHeadPic: '😊',
+            username: '哈朋友'
+        }, {
+            notice: '点赞',
+            atcion: '评论',
+            origin: '你的评论',
+            userHeadPic: '😊',
+            username: '哈朋友'
+        }, {
+            notice: '点赞',
+            atcion: '评论',
+            origin: '你的评论',
+            userHeadPic: '😊',
+            username: '哈朋友'
+        }
+    ]
     }
     /**
      * 添加或删减商品，交由redux进行数据处理，作为全局变量
@@ -104,7 +129,7 @@ class message extends Component {
 
                         {
                             this.state.datalist.map((item, index) => {
-                                return <div className="shap-wrpa">
+                                return <div className="shap-wrpa" key={index}>
                                     <div className="shap-left">
                                         <div className="left-top">
                                             {
