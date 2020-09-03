@@ -1,0 +1,50 @@
+@import (reference) "../../style/mixin.less";
+@import "../../assets/iconfonts/iconfont.css";
+
+.common-con-top{
+  padding-top: @common-wd;
+}
+.container{
+    margin-top: .8rem;
+    font-size: .58rem;
+    .common-top{
+        // line-height:1.2rem;
+        margin: 10px 5px;
+        display: flex;
+        background-color: @white;
+        .pic{
+            flex:1;
+            font-size:1rem;
+            text-align: center;
+        }
+        .classitem{
+            flex:4;
+            .font(.48rem)
+        }
+    }
+    .common-wrap{
+        background-color: @white;
+        height: 18rem;
+        .shap-wrpa{
+            font-size: .48rem;
+            display: flex;
+            .shap-left{
+                flex: 4;
+                .left-top{
+
+                    .like{
+                        margin: 5px 10px;
+                    }
+                }
+            }
+            .shap-right{
+                flex: 1;
+                font-size: 1.5rem;
+            }
+            .img-head{
+                font-size: 1rem;
+                margin: .2rem;
+            }
+        }
+    }
+}

@@ -10,6 +10,7 @@ export default class PublicHeader extends Component{
     record: PropTypes.any,
     title: PropTypes.string.isRequired,
     confirm: PropTypes.any,
+    showLeft:PropTypes.bool,
   }
 
   state = {
@@ -32,7 +33,9 @@ export default class PublicHeader extends Component{
   render(){
     return(
       <header className="header-container">
-        <span className="header-slide-icon icon-catalog" onClick={this.toggleNav}></span>
+        {
+          this.props.showLeft&&<span className="header-slide-icon icon-catalog" onClick={this.toggleNav}></span>
+        }
         <span className="header-title">{this.props.title}</span>
         {
           this.props.record&&<NavLink to="/record" exact className="header-link icon-jilu"></NavLink>
