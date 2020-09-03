@@ -19,22 +19,8 @@ class message extends Component {
     state = {
         alertStatus: false, //弹框状态
         alertSystemInfo:[//系统消息
-
-
-        ],
-        datalist:[{
-            notice:'评论',
-            atcion:'动态',
-            origin:'你的动态',
-            userHeadPic:'',
-            username:'你的弟弟'
-        },{
-            notice:'点赞',
-            atcion:'评论',
-            origin:'你的评论',
-            userHeadPic:'',
-            username:'哈朋友'
-        }]
+        ]
+       
     }
     /**
      * 添加或删减商品，交由redux进行数据处理，作为全局变量
@@ -94,14 +80,14 @@ class message extends Component {
                     </div>
                 </div>
                 <div className="common-wrap">
-                    {
+                    {/* {
                         this.state.map((item,index)=>{
                             return <div className="shap-wrpa">
                                 <span className="name">{item.username}</span>
                                 <span ></span>
                             </div>
                         })
-                    }
+                    } */}
                 </div>
                 <section className="pro-list-cond">
                   

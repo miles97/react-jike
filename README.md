@@ -1,7 +1,7 @@
 
 ## 技术栈：
   react + redux + webpack4.0 + react-router + ES6/7/8 + immutable 
-
+  一知半解 + 不懂 + 一点点      +    不太懂     + 还行吧   + 不懂
 
 ## 运行项目（nodejs 6.0+）
 
@@ -18,34 +18,7 @@
 ```
 
 
-## 说明
-
->  本项目主要用于理解 react 和 redux 的编译方式，以及 react + redux 之间的配合方式
-
->  如果觉得不错的话，您可以点右上角 "Star" 支持一下 谢谢！ ^_^
-
->  或者您可以 "follow" 一下，我会不断开源更多的有趣的项目
-
->  如有问题请直接在 Issues 中提，或者您发现问题并有非常好的解决方案，欢迎 PR 👍
-
->  开发环境 macOS 10.15  Chrome 63  nodejs 8.9.1
-
->  推荐一个 vue2 + vuex 构建的 45 个页面的大型开源项目。[地址在这里](https://github.com/bailicangdu/vue2-elm)
-
->  另外一个 vue2 + vuex 的简单项目，非常适合入门练习。[地址在这里](https://github.com/bailicangdu/vue2-happyfri)
-
-
-## 演示
-
-[查看演示效果](https://cangdu.org/pxq/)（请用chrome的手机模式预览）
-
-### 移动端扫描下方二维码
-
-<img src="https://github.com/bailicangdu/pxq/blob/master/screenshot/demo1.png" width="200" height="200"/>
-
-
-
-# 个人感悟
+# bailicangdu的个人感悟
 
 ## 做React需要会什么？
 react的功能其实很单一，主要负责渲染的功能，现有的框架，比如angular是一个大而全的框架，用了angular几乎就不需要用其他工具辅助配合，但是react不一样，他只负责ui渲染，想要做好一个项目，往往需要其他库和工具的配合，比如用redux来管理数据，react-router管理路由，react已经全面拥抱es6，所以es6也得掌握，webpack就算是不会配置也要会用，要想提高性能，需要按需加载，immutable.js也得用上，还有单元测试。。。。
