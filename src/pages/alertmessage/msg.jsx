@@ -114,7 +114,7 @@ class message extends Component {
         return (
 
             <main className="common-con-top">
-                <PublicHeader title='我的通知' record showLeft={false} />
+                <PublicHeader title='我的通知' record showLeft={false} showRight={false} />
                 <div className="container">
                     <div className="common-top">
                         <div className="pic">

@@ -11,6 +11,7 @@ export default class PublicHeader extends Component{
     title: PropTypes.string.isRequired,
     confirm: PropTypes.any,
     showLeft:PropTypes.bool,
+    showRight:PropTypes.bool
   }
 
   state = {
@@ -38,7 +39,7 @@ export default class PublicHeader extends Component{
         }
         <span className="header-title">{this.props.title}</span>
         {
-          this.props.record&&<NavLink to="/record" exact className="header-link icon-jilu"></NavLink>
+          this.props.showRight&&this.props.record&&<NavLink to="/record" exact className="header-link icon-jilu"></NavLink>
         }
         {
           this.props.confirm&&<NavLink to="/" exact className="header-link header-link-confim">确定</NavLink>

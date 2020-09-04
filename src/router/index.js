@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
 import asyncComponent from '@/utils/asyncComponent';
 
-import home from "@/pages/home/home";
+// import home from "@/pages/home/home"; //原来的页面首页
 const record = asyncComponent(() => import("@/pages/record/record"));
-const helpcenter = asyncComponent(() => import("@/pages/helpcenter/helpcenter"));
-const production = asyncComponent(() => import("@/pages/production/production"));
-const balance = asyncComponent(() => import("@/pages/balance/balance"));
+// const helpcenter = asyncComponent(() => import("@/pages/helpcenter/helpcenter"));
+// const production = asyncComponent(() => import("@/pages/production/production"));
+// const balance = asyncComponent(() => import("@/pages/balance/balance"));
 const jikepage = asyncComponent(() =>import('@/pages/homepage/jikehome')) 
 const moment = asyncComponent(() =>import('@/pages/moment/moment')) 
 const msg = asyncComponent(() =>import('@/pages/alertmessage/msg')) 
@@ -18,9 +18,9 @@ export default class RouteConfig extends Component{
         <Switch>
           <Route path="/" exact component={jikepage} />
           <Route path="/record" component={record} />
-          <Route path="/helpcenter" component={helpcenter} />
-          <Route path="/production" component={production} />
-          <Route path="/balance" component={balance} />
+          {/* <Route path="/helpcenter" component={helpcenter} />/ */}
+          {/* <Route path="/production" component={production} /> */}
+          {/* <Route path="/balance" component={balance} /> */}
           <Route path="/jikepage" component={jikepage} />
           <Route path="/moment" component={moment} />
           <Route path="/msg" component={msg} />
