@@ -18,7 +18,7 @@
 ```
 ## 项目中待实践的React特性
 
-简单redux  生命周期还是有疑问
+简单redux  生命周期  简单的webpack配置与vue项目的差别
 
 
 # bailicangdu的个人感悟
