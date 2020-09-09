@@ -13,7 +13,8 @@ import TouchableOpacity from '@/components/TouchableOpacity/TouchableOpacity';
 import mixin, { padStr } from '@/utils/mixin';
 import './home.less';
 
-@mixin({padStr})
+// @mixin({padStr})
+
 class Home extends Component {
   static propTypes = {
     formData: PropTypes.object.isRequired,

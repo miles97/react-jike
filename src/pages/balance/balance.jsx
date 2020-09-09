@@ -7,6 +7,7 @@ import PublicFooter from '@/components/footer/footer';
 import API from '@/api/api';
 import './balance.less';
 
+
 class BrokeRage extends Component{
   state = {
     applyNum: '', //输入值

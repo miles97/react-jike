@@ -2,7 +2,7 @@
 ## 技术栈：
   react + redux + webpack4.0 + react-router + ES6/7/8 + immutable 
 
-Immutable通过数据处理防止部分的问题功能
+Immutable通过数据处理防止部分的问题功能,关于is或者fromJS函数还是迷糊
 
 ## 运行项目（nodejs 6.0+）
 

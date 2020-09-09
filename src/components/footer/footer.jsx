@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { is, fromJS } from 'immutable';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+// import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import './footer.less';
 
 export default class PublicFooter extends Component {
@@ -41,8 +41,10 @@ export default class PublicFooter extends Component {
           <NavLink to="/moment" exact className="nav-link icon-jiantou-copy-copy"
             activeClassName="activeclass"
             >动态</NavLink>
+
           <NavLink to="/jikepage?name=1231" exact className="nav-link icon-jiantou-copy-copy" 
           ><span className="icon-plus" role="img" aria-label='plus'>➕</span></NavLink>
+
           <NavLink to="/msg" exact className="nav-link icon-jiantou-copy-copy"
            activeClassName="activeclass"
           >推送</NavLink>

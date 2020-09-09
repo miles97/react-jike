@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { is, fromJS } from 'immutable';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+// import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import './header.less';
 
 export default class PublicHeader extends Component{
@@ -14,8 +14,12 @@ export default class PublicHeader extends Component{
     showRight:PropTypes.bool
   }
 
+  static defaultProps = {
+    showLeft : true
+  }
+
   state = {
-    navState: false, //导航栏是否显示
+    navState: false, // 导航栏是否显示
   };
   
   // 切换左侧导航栏状态
@@ -30,7 +34,7 @@ export default class PublicHeader extends Component{
   shouldComponentUpdate(nextProps, nextState) {
     return !is(fromJS(this.props), fromJS(nextProps))|| !is(fromJS(this.state),fromJS(nextState))
   }
-
+  // 标题组件的渲染
   render(){
     return(
       <header className="header-container">
@@ -44,7 +48,7 @@ export default class PublicHeader extends Component{
         {
           this.props.confirm&&<NavLink to="/" exact className="header-link header-link-confim">确定</NavLink>
         }
-        <ReactCSSTransitionGroup
+        {/* <ReactCSSTransitionGroup
           component={this.FirstChild}
           transitionName="nav"
           transitionEnterTimeout={300}
@@ -56,7 +60,7 @@ export default class PublicHeader extends Component{
                 <NavLink to="/helpcenter" exact className="nav-link icon-jiantou-copy-copy">帮助中心</NavLink>
               </aside>
             }
-        </ReactCSSTransitionGroup>
+        </ReactCSSTransitionGroup> */}
         
       </header>
     );

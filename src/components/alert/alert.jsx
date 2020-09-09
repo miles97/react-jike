@@ -16,7 +16,7 @@ export default class Alert extends Component{
     const childrenArray = React.Children.toArray(props.children);
     return childrenArray[0] || null;
   }
-  // 关闭弹框
+  // 关闭弹框 
   confirm = () => {
     this.props.closeAlert();
   }
