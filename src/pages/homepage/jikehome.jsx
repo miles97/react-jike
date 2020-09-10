@@ -115,7 +115,7 @@ class jikeHome extends Component {
     shouldComponentUpdate(nextProps, nextState) {
         return !is(fromJS(this.props), fromJS(nextProps)) || !is(fromJS(this.state), fromJS(nextState))
     }
-
+    
     componentDidMount() {
         if (!this.props.proData.dataList.length) {
             this.props.getProData();

@@ -13,7 +13,7 @@ import TouchableOpacity from '@/components/TouchableOpacity/TouchableOpacity';
 import mixin, { padStr } from '@/utils/mixin';
 import './home.less';
 
-// @mixin({padStr})
+@mixin({padStr})
 
 class Home extends Component {
   static propTypes = {
@@ -23,7 +23,7 @@ class Home extends Component {
     clearData: PropTypes.func.isRequired,
     clearSelected: PropTypes.func.isRequired,
   }
-
+  
   state = {
     alertStatus: false, //弹框状态
     alertTip: '', //弹框提示文字
@@ -118,6 +118,7 @@ class Home extends Component {
   shouldComponentUpdate(nextProps, nextState) {
     return !is(fromJS(this.props), fromJS(nextProps)) || !is(fromJS(this.state),fromJS(nextState))
   }
+  
 
   componentWillMount(){
     this.initData(this.props);

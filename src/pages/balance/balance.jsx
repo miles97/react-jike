@@ -88,6 +88,10 @@ class BrokeRage extends Component{
     this.initData();
   }
 
+  componentWillUnmount(){
+    // clearInterval(this.timeId)
+  }
+
   render(){
     return (
       <main className="home-container">

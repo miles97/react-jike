@@ -8,18 +8,18 @@ import PublicHeader from '@/components/header/header';
 
 import './msg.less';
 
-class message extends Component {
+class Message extends Component {
     //   static propTypes = {
     //     proData: PropTypes.object.isRequired,
     //     getProData: PropTypes.func.isRequired,
     //     togSelectPro: PropTypes.func.isRequired,
     //     editPro: PropTypes.func.isRequired,
     //   }
-
+    // constructor(props) {
+    // super(props);
     state = {
         alertStatus: false, //弹框状态
         alertSystemInfo: [//系统消息
-
         ],
         datalist: [{
             notice: '评论',
@@ -58,8 +58,10 @@ class message extends Component {
             userHeadPic: '😊',
             username: '哈朋友'
         }
-    ]
+    ],
+       date: new Date()
     }
+  // }
     /**
      * 添加或删减商品，交由redux进行数据处理，作为全局变量
      * @param  {int} index 编辑的商品索引
@@ -71,6 +73,7 @@ class message extends Component {
             return
         }
         this.props.editPro(index, currentNum); //调用redux方法进行数据的变动操作
+        
     }
     getName(val) {
         // if(val)
@@ -91,6 +94,15 @@ class message extends Component {
         this.props.togSelectPro(index);
     }
 
+    tick() {
+      this.setState({
+        date: new Date()
+      });
+    }
+
+    componentDidUpdate(){
+      console.log('nima')
+    }
     //  简单的react生命周期函数问题
     shouldComponentUpdate(nextProps, nextState) {
         return !is(fromJS(this.props), fromJS(nextProps)) || !is(fromJS(this.state), fromJS(nextState))
@@ -100,8 +112,19 @@ class message extends Component {
         if (!this.props.proData.dataList.length) {
             this.props.getProData();
         }
+        this.timerID = setInterval(
+          () => this.tick(),
+          1000
+        );
     }
 
+    handleClick = ()=>{
+      console.log(this)
+    }
+
+    componentWillUnmount() {
+      clearInterval(this.timerID);
+    }
     //return的页面构建问题
     render() {
         // let likeorcomment;
@@ -120,11 +143,12 @@ class message extends Component {
                         <div className="pic">
                         <span role="img" aria-label='like'>📢</span>
                         </div>
-                        <div className="classitem">
+                        <div className="classitem" onClick={this.handleClick}>
                             <div>系统通知</div>
                             <div className="bottom"> {this.state.datalist[0].username}给你的{this.state.datalist[0].atcion}{this.state.datalist[0].notice}</div>
                         </div>
                     </div>
+                    <div className="name">北京时间{this.state.date.toLocaleTimeString()}</div>
                     <div className="common-wrap">
 
                         {
@@ -171,4 +195,4 @@ export default connect(state => ({
     getProData,
     togSelectPro,
     editPro
-})(message);
+})(Message);
