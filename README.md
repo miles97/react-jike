@@ -4,7 +4,7 @@
 
 Immutable通过数据处理防止部分的问题功能,关于is或者fromJS函数还是迷糊
 
-## 运行项目（nodejs 6.0+）
+## 运行项目
 
 ```
  git clone https://github.com/bailicangdu/react-pxq.git
