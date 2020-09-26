@@ -45,8 +45,6 @@ react的diff算法用在什么地方呢？当组件更新的时候，react会创
 ![](https://github.com/bailicangdu/pxq/blob/master/screenshot/diff.png)
 
 
-
-
 ## React组件是怎么来的
 
 组件的创造方法为React.createClass() ——创造一个类，react系统内部设计了一套类系统，利用它来创造react组件。但这并不是必须的，我们还可以用es6的class类来创造组件,这也是Facebook官方推荐的写法。
